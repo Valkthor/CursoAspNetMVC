@@ -9,10 +9,25 @@ namespace Seccion4ModeloMVC.Controllers
 {
     public class ClientesController : Controller
     {
+        public static List<Clientes> empList = new List<Clientes>
+        {
+            new Clientes{
+                ID=1,
+                nombre="nombre3",
+                FechaAlta=DateTime.Parse(DateTime.Today.ToString()),
+                edad=41
+            },
+            new Clientes{
+                ID=2,
+                nombre="nombre4",
+                FechaAlta=DateTime.Parse(DateTime.Today.ToString()),
+                edad=35
+            },
+        };
         // GET: Clientes
         public ActionResult Index()
         {
-            var Clientes = from e in TodosLosClientes()
+            var Clientes = from e in empList
                            orderby e.ID
                            select e;
             return View(Clientes);
@@ -49,7 +64,9 @@ namespace Seccion4ModeloMVC.Controllers
         // GET: Clientes/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            List<Clientes> empList = TodosLosClientes();
+            var Clientes = empList.Single(m => m.ID == id);
+            return View(Clientes);
         }
 
         // POST: Clientes/Edit/5
@@ -59,8 +76,12 @@ namespace Seccion4ModeloMVC.Controllers
             try
             {
                 // TODO: Add update logic here
-
-                return RedirectToAction("Index");
+                var cliente = empList.Single(m => m.ID == id);
+                if(TryUpdateModel(cliente))
+                {
+                    return RedirectToAction("Index");
+                }
+                return View(cliente);
             }
             catch
             {
