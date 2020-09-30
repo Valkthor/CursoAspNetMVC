@@ -80,3 +80,6 @@ C:\source\repos\CursoASPNetMVC\Seccion4ModeloMVC\Seccion4ModeloMVC\bin\EntityFra
 C:\source\repos\CursoASPNetMVC\Seccion4ModeloMVC\Seccion4ModeloMVC\bin\EntityFramework.SqlServer.dll
 C:\source\repos\CursoASPNetMVC\Seccion4ModeloMVC\Seccion4ModeloMVC\bin\EntityFramework.xml
 C:\source\repos\CursoASPNetMVC\Seccion4ModeloMVC\Seccion4ModeloMVC\bin\EntityFramework.SqlServer.xml
+C:\source\repos\CursoASPNetMVC\Seccion4ModeloMVC\Seccion4ModeloMVC\obj\Debug\Seccion4ModeloMVC.Migrations.InitialCreate.resources
+C:\source\repos\CursoASPNetMVC\Seccion4ModeloMVC\Seccion4ModeloMVC\obj\Debug\Seccion4ModeloMVC.csproj.GenerateResource.cache
+C:\source\repos\CursoASPNetMVC\Seccion4ModeloMVC\Seccion4ModeloMVC\obj\Debug\Seccion4ModeloMVC.Migrations.Dataannotations.resources
