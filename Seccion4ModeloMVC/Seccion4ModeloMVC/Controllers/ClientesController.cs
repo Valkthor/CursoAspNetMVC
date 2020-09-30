@@ -46,13 +46,13 @@ namespace Seccion4ModeloMVC.Controllers
         }
 
         // POST: Clientes/Create
+        // POST: Clientes/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(Clientes emp)
         {
             try
             {
-                // TODO: Add insert logic here
-
+                empList.Add(emp);
                 return RedirectToAction("Index");
             }
             catch
@@ -61,6 +61,30 @@ namespace Seccion4ModeloMVC.Controllers
             }
         }
 
+        /*
+        FORMA TRADICIONAL CON FORM COLLECTION
+        [HttpPost]
+        public ActionResult Create(FormCollection collection)
+        {
+            try
+            {
+                // TODO: Add insert logic here
+                Clientes emp = new Clientes();
+                emp.nombre = collection["nombre"];
+                DateTime jDate;
+                DateTime.TryParse(collection["DOB"], out jDate);
+                emp.FechaAlta = jDate;
+                string edad = collection["edad"];
+                emp.edad = Int32.Parse(edad);
+                empList.Add(emp);
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                return View();
+            }
+        }
+         */
         // GET: Clientes/Edit/5
         public ActionResult Edit(int id)
         {
