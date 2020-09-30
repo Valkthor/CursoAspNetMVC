@@ -76,3 +76,7 @@ C:\source\repos\CursoASPNetMVC\Seccion4ModeloMVC\Seccion4ModeloMVC\obj\Debug\Sec
 C:\source\repos\CursoASPNetMVC\Seccion4ModeloMVC\Seccion4ModeloMVC\obj\Debug\Seccion4ModeloMVC.csproj.CopyComplete
 C:\source\repos\CursoASPNetMVC\Seccion4ModeloMVC\Seccion4ModeloMVC\obj\Debug\Seccion4ModeloMVC.dll
 C:\source\repos\CursoASPNetMVC\Seccion4ModeloMVC\Seccion4ModeloMVC\obj\Debug\Seccion4ModeloMVC.pdb
+C:\source\repos\CursoASPNetMVC\Seccion4ModeloMVC\Seccion4ModeloMVC\bin\EntityFramework.dll
+C:\source\repos\CursoASPNetMVC\Seccion4ModeloMVC\Seccion4ModeloMVC\bin\EntityFramework.SqlServer.dll
+C:\source\repos\CursoASPNetMVC\Seccion4ModeloMVC\Seccion4ModeloMVC\bin\EntityFramework.xml
+C:\source\repos\CursoASPNetMVC\Seccion4ModeloMVC\Seccion4ModeloMVC\bin\EntityFramework.SqlServer.xml

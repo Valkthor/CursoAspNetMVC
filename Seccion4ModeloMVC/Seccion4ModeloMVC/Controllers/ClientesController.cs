@@ -24,10 +24,12 @@ namespace Seccion4ModeloMVC.Controllers
                 edad=35
             },
         };
+
+        private EmpDBContext db = new EmpDBContext();
         // GET: Clientes
         public ActionResult Index()
         {
-            var Clientes = from e in empList
+            var Clientes = from e in db.Clientes
                            orderby e.ID
                            select e;
             return View(Clientes);
@@ -52,7 +54,9 @@ namespace Seccion4ModeloMVC.Controllers
         {
             try
             {
-                empList.Add(emp);
+                //empList.Add(emp);
+                db.Clientes.Add(emp);
+                db.SaveChanges();
                 return RedirectToAction("Index");
             }
             catch
@@ -88,8 +92,8 @@ namespace Seccion4ModeloMVC.Controllers
         // GET: Clientes/Edit/5
         public ActionResult Edit(int id)
         {
-            List<Clientes> empList = TodosLosClientes();
-            var Clientes = empList.Single(m => m.ID == id);
+            
+            var Clientes = db.Clientes.Single(m => m.ID == id);
             return View(Clientes);
         }
 
@@ -100,9 +104,10 @@ namespace Seccion4ModeloMVC.Controllers
             try
             {
                 // TODO: Add update logic here
-                var cliente = empList.Single(m => m.ID == id);
+                var cliente = db.Clientes.Single(m => m.ID == id);
                 if(TryUpdateModel(cliente))
                 {
+                    db.SaveChanges();
                     return RedirectToAction("Index");
                 }
                 return View(cliente);
