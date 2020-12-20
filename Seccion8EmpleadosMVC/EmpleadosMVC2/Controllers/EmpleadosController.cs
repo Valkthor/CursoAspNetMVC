@@ -15,9 +15,18 @@ namespace EmpleadosMVC2.Controllers
         private EmpleadoDBContext db = new EmpleadoDBContext();
 
         // GET: Empleados
-        public ActionResult Index()
+        //public ActionResult Index()
+        //{
+        //    return View(db.Empleados.ToList());
+        //}
+        public ActionResult Index( string BuscarNombre)
         {
-            return View(db.Empleados.ToList());
+            var Empleados = from cr in db.Empleados select cr;
+            if (!String.IsNullOrEmpty(BuscarNombre))
+            {
+                Empleados = Empleados.Where(c => c.Nombre.Contains(BuscarNombre));
+            }
+            return View(Empleados);
         }
 
         // GET: Empleados/Details/5

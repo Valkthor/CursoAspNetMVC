@@ -6,6 +6,13 @@
 
 <h2>Index</h2>
 
+@using (Html.BeginForm())
+{
+    <p>
+        Buscar Nombre @Html.TextBox("BuscarNombre") <button type="submit">Buscar sha!</button> <br /> 
+    </p>
+}
+
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
